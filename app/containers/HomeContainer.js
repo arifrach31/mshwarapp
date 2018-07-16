@@ -39,7 +39,7 @@ const bannerHeight = height / 2.8
 
 class HomeContainer extends Component {
 
-  componentWillMount() {
+  componentDidlMount() {
     OneSignal.init("c9266cd5-9b8a-45d9-9d49-2dc8a813d4e2");
 
     OneSignal.addEventListener('received', this.onReceived);

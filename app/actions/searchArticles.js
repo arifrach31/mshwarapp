@@ -14,10 +14,12 @@ export const getSearchArticles = (keyword, sortest) => {
 				}
 			})
 			const data = await response.json()
+			console.log('response: ', data)
 			await dispatch(receiveArticles(data.response.docs))
 			await dispatch(setSuccess(true, 'SUCCESS_SEARCH_ARTICLES'))
       		await dispatch(setLoading(false, 'LOADING_SEARCH_ARTICLES'))
 		} catch (e) {
+			console.log('error: ',e )
 			dispatch(setFailed(true, 'FAILED_SEARCH_ARTICLES', e))
 			dispatch(setLoading(false, 'LOADING_SEARCH_ARTICLES'))
 		}

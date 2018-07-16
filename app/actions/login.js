@@ -1,13 +1,13 @@
 import { AsyncStorage } from 'react-native'
 import { setLoading, setFailed, setSuccess } from './processor'
 import { SAVE_SESSION_PERSISTANCE } from '../constants'
-import { API_AUTH } from '../env'
+import { API_LOCAL } from '../env'
 
 export const login = (email, password) => {
 	return async dispatch => {
 		await dispatch(setLoading(true, 'LOADING_PROCESS_LOGIN'))
 		try {
-			const response = await fetch(`${API_AUTH}/sessions/create`, {
+			const response = await fetch(`${API_LOCAL}:3001/sessions/create`, {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
