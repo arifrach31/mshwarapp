@@ -1,4 +1,4 @@
-# reactNativeApi
+# mshwarapp
 
 1. Git clone https://github.com/arifrach31/reactNativeApi.git (Clone Project Repository)
 2. NPM Install (To install packages required)
